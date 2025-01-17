@@ -1,5 +1,5 @@
-from character import Character
-dave = Character("Dave", "A smelly zombie")
+from character import Enemy
+dave = Enemy("Dave", "A smelly zombie")
 
 dave.describe()
 
