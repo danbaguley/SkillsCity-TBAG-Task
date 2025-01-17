@@ -1,4 +1,5 @@
 from room import Room
+from character import Enemy
 
 kitchen = Room("Kitchen")
 ballroom = Room("Ballroom")
@@ -19,6 +20,10 @@ kitchen.link_room(dining_hall, "south")
 dining_hall.link_room(kitchen, "north")
 dining_hall.link_room(ballroom,"west")
 ballroom.link_room(dining_hall,"east")
+
+dave = Enemy("Dave", "A smelly zombie")
+dave.set_conversation("Brrlgrh... rgrhl... brains...")
+dave.set_weakness("cheese")
 
 current_room = kitchen
 while True:
