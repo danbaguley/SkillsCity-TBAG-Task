@@ -5,6 +5,7 @@ class Character():
         self.name = char_name
         self.description = char_description
         self.conversation = None
+        
 
     # Describe this character​
 

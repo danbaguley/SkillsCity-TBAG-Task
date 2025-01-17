@@ -25,9 +25,21 @@ dave = Enemy("Dave", "A smelly zombie")
 dave.set_conversation("Brrlgrh... rgrhl... brains...")
 dave.set_weakness("cheese")
 
+dining_hall.set_character(dave)
+
 current_room = kitchen
 while True:
-      print("\n")
-      current_room.get_details()
-      command = input("> ")
-      current_room = current_room.move(command)
+    print("\n")
+    current_room.get_details()
+
+    inhabitant = current_room.get_character()
+    if inhabitant is not None:
+        inhabitant.describe()
+        print("What will you fight with?")
+        fight_with = input()
+        dave.fight(fight_with)
+        command = input("> ")
+        current_room = current_room.move(command)
+    else:
+        command = input("> ")
+        current_room = current_room.move(command)
