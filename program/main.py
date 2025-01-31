@@ -28,7 +28,9 @@ alice = Friend("Alice", "A friendly ghost")
 alice.set_conversation("Hello there! I can help you on your journey.")
 
 # Add a key item to the dining hall
-key = Item("key")
+
+
+key = Item()
 dining_hall.set_item(key)
 
 # Place characters in rooms
