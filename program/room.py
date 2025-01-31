@@ -46,5 +46,11 @@ class Room:
 
     def get_character(self):
         return self.character
+    
+    def set_item(self, new_item):
+        self.item = new_item
+
+    def get_item(self):
+        return self.item
         
 
